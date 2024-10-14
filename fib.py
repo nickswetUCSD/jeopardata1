@@ -9,9 +9,6 @@ def F(n):
     def fib(n):
         '''Returns a list of the nth fibonacci numbers. When n = 0, returns 0. When n = 1, returns 1'''
 
-        if not isinstance(n, int):
-            return AssertionError("n must be an integer >= 0")
-
         if n not in memos:
             memos[n] = fib(n - 1) + fib(n - 2)
         return memos[n]
